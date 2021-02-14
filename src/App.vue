@@ -5,7 +5,7 @@
     <wrong-guessed-letters :wrong-letters="wrongLetters" />
     <correct-word :letters="letters" :correct-letters="correctLetters" />
   </div>
-  <result :status="status" :correct-word="word" />
+  <result :status="status" :correct-word="word" @restart="restart" />
   <app-alert :show="showAlertBoolean" />
 </template>
 
