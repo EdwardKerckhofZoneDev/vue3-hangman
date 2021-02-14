@@ -2,6 +2,8 @@
 @import 'animations';
 
 @import 'components/header';
+@import 'components/hangMan';
+@import 'components/wrongGuessedLetters';
 
 html {
   box-sizing: border-box;
