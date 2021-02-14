@@ -78,8 +78,11 @@ export default defineComponent({
     handleKeyDown(event => {
       const key: string = (event as KeyboardEvent).key.toLowerCase()
 
-      const isLetter = key >= 'a' && key <= 'z'
-      if (!isLetter) return // if it is not a letter, return
+      if (
+        (event as KeyboardEvent).keyCode < 65 ||
+        (event as KeyboardEvent).keyCode > 90
+      )
+        return
 
       if (status.value) return // if the game was won / lost, return
 
